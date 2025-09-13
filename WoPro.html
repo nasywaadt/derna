@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+        <!-- Boxicon -->
+        <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+        
+        <!-- swiper -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+        <!-- CSS -->
+        <link rel="stylesheet" href="jual-beli/assets/css/stylepro.css">
+    </head>
+
+    <body>
+        <!-- scroll reveal -->
+        <script src="https://unpkg.com/scrollreveal"></script>
+
+        <!-- Main JS -->
+        <script src="jual-beli/assets/js/main.js"></script>
+
+        <!-- swiper -->
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+        <!-- header -->
+        <header>
+            <a href="index.html" class="logo">
+                <img src="jual-beli/assets/img/WDC Logo.png" alt="WDC Logo">
+            </a>
+
+            <nav>
+                <ul class="navbar">
+                    <li><a href="jual-beli.html">Home</a></li>
+                    <li><a href="#new">Koleksi</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle">Produk</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="WoPro.html">Wanita</a></li>
+                            <li><a href="ManPro.html">Pria</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+
+            <div class="header-icons">
+                <i class='bx bx-menu' id="menu-icon"></i>
+                <i class='bx bx-search' id="search-icon"></i>
+                <i class='bx bxs-cart-alt' id="cart-icon"></i>
+                <i class='bx bx-user' id="user-icon"></i>
+            </div>
+
+            <div class="search-box">
+                <input type="search" name="" id="" placeholder="Search Here...">
+            </div>
+
+            <div class="cart">
+                <!-- item 1 -->
+                <div class="box">
+                    <img src="jual-beli/assets/img/skirt/skirt14.png" alt="">
+                    <div class="text">
+                        <h3>Valerina Skirt</h3>
+                        <div class="price-qty">
+                            <span>Rp180,000</span>
+                            <span>x1</span>
+                        </div>
+                    </div>
+                    <i class='bx bxs-trash-alt delete-icon'></i>
+                </div>
+                
+                <!-- item 2 --> 
+                <div class="box">
+                    <img src="jual-beli/assets/img/top/sweater Black.png" alt="">
+                    <div class="text">
+                        <h3>Sweater Hitam</h3>
+                        <div class="price-qty">
+                            <span>Rp230,000</span>
+                            <span>x1</span>
+                        </div>
+                    </div>
+                    <i class='bx bxs-trash-alt delete-icon'></i>
+                </div>
+                
+                <div class="box">
+                    <img src="jual-beli/assets/img/top/sweater Bey.png" alt="">
+                    <div class="text">
+                        <h3>Sweater Bey</h3>
+                        <div class="price-qty">
+                            <span>Rp250,000</span>
+                            <span>x1</span>
+                        </div>
+                    </div>
+                    <i class='bx bxs-trash-alt delete-icon'></i>
+                </div>
+
+                <h2> Total Rp660,000</h2>
+                <a href="#" class="btn">Checkout</a>
+
+            </div>
+
+            <!-- user -->
+             <div class="user">
+                <h2>Login Now</h2>
+                <input type="email" placeholder="Your Email...">
+                <input type="password" name="" id="" placeholder="password...">
+                <input type="submit" value="Login" class="login-btn">
+                <p>Forget Password <a href="#">Reset Now</a></p>
+                <p>Dont have account <a href="#"> Create One </a></p>
+             </div>
+        </header>
+
+
+        <!-- product -->
+        <section class="product" id="product">
+            <div class="heading">
+                <h1>Koleksi Pakaian <span>Wanita</span></h1>
+                <p>T-shirt</p>
+            </div>
+            <div class="product-container">
+                <div class="box">
+                    <img src="jual-beli/assets/img/skirt/Skirt1.png">
+                    <div class="content">
+                        <h2>Sky Breeze</h2>
+                        <span>Rp275,000</span>
+                        <i class='bx bxs-cart-alt' id="cart-icon"></i>
+                    </div>
+                </div>
+                <div class="box">
+                    <img src="jual-beli/assets/img/skirt/Skirt2.png">
+                    <div class="content">
+                        <h2>Midnight Flow</h2>
+                        <span>Rp860,000</span>
+                        <i class='bx bxs-cart-alt' id="cart-icon"></i>
+                    </div>
+                </div>
+                <div class="box">
+                    <img src="jual-beli/assets/img/skirt/Skirt3.png">
+                    <div class="content">
+                        <h2>Navy Charm</h2>
+                        <span>Rp150,000</span>
+                        <i class='bx bxs-cart-alt' id="cart-icon"></i>
+                    </div>
+                </div>
+                <div class="box">
+                    <img src="jual-beli/assets/img/skirt/Skirt4.png">
+                    <div class="content">
+                        <h2>Scarlet Grace</h2>
+                        <span>Rp720,000</span>
+                        <i class='bx bxs-cart-alt' id="cart-icon"></i>
+                    </div>
+                </div>
+                <div class="box">
+                    <img src="jual-beli/assets/img/skirt/Skirt5.png">
+                    <div class="content">
+                        <h2>Snow Petal</h2>
+                        <span>Rp395,000</span>
+                        <i class='bx bxs-cart-alt' id="cart-icon"></i>
+                    </div>
+                </div>
+                <div class="box">
+                    <img src="jual-beli/assets/img/skirt/Skirt6.png">
+                    <div class="content">
+                        <h2>Ruby Twirl</h2>
+                        <span>Rp980,000</span>
+                        <i class='bx bxs-cart-alt' id="cart-icon"></i>
+                    </div>
+                </div>
+                <div class="box">
+                    <img src="jual-beli/assets/img/skirt/Skirt7.png">
+                    <div class="content">
+                        <h2>Ash Pleat</h2>
+                        <span>Rp180,000</span>
+                        <i class='bx bxs-cart-alt' id="cart-icon"></i>
+                    </div>
+                </div>
+                <div class="box">
+                    <img src="jual-beli/assets/img/skirt/Skirt8.png">
+                    <div class="content">
+                        <h2>Sandy Chic</h2>
+                        <span>Rp650,000</span>
+                        <i class='bx bxs-cart-alt' id="cart-icon"></i>
+                    </div>
+                </div>
+                <div class="box">
+                    <img src="jual-beli/assets/img/skirt/Skirt9.png">
+                    <div class="content">
+                        <h2>Celeste Ruffle</h2>
+                        <span>Rp575,000</span>
+                        <i class='bx bxs-cart-alt' id="cart-icon"></i>
+                    </div>
+                </div>
+                <div class="box">
+                    <img src="jual-beli/assets/img/skirt/Skirt10.png">
+                    <div class="content">
+                        <h2>Azure Wrap</h2>
+                        <span>Rp390,000</span>
+                        <i class='bx bxs-cart-alt' id="cart-icon"></i>
+                    </div>
+                </div>
+                <div class="box">
+                    <img src="jual-beli/assets/img/skirt/Skirt11.png">
+                    <div class="content">
+                        <h2>Noir Edge</h2>
+                        <span>Rp230,000</span>
+                        <i class='bx bxs-cart-alt' id="cart-icon"></i>
+                    </div>
+                </div>
+                <div class="box">
+                    <img src="jual-beli/assets/img/skirt/Skirt12.png">
+                    <div class="content">
+                        <h2>Classic Pleated </h2>
+                        <span>Rp350,000</span>
+                        <i class='bx bxs-cart-alt' id="cart-icon"></i>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="product2" id="product2">
+            <div class="heading">
+                <p>Shirt</p>
+            </div>
+            <div class="product-container">
+                <div class="box">
+                    <img src="jual-beli/assets/img/top/Bella Paradise.png">
+                    <div class="content">
+                        <h2>Bella Paradise</h2>
+                        <span>Rp560,000</span>
+                        <i class='bx bxs-cart-alt' id="cart-icon"></i>
+                    </div>
+                </div>
+                <div class="box">
+                    <img src="jual-beli/assets/img/top/Blossom Top.png">
+                    <div class="content">
+                        <h2>Blossom Top</h2>
+                        <span>Rp300,000</span>
+                        <i class='bx bxs-cart-alt' id="cart-icon"></i>
+                    </div>
+                </div>
+                <div class="box">
+                    <img src="jual-beli/assets/img/top/demy vest.png">
+                    <div class="content">
+                        <h2>Demy Vest</h2>
+                        <span>Rp430,000</span>
+                        <i class='bx bxs-cart-alt' id="cart-icon"></i>
+                    </div>
+                </div>
+                <div class="box">
+                    <img src="jual-beli/assets/img/top/sweater Bey.png">
+                    <div class="content">
+                        <h2>Sweater Bey</h2>
+                        <span>Rp850,000</span>
+                        <i class='bx bxs-cart-alt' id="cart-icon"></i>
+                    </div>
+                </div>
+                <div class="box">
+                    <img src="jual-beli/assets/img/top/sweater Black.png">
+                    <div class="content">
+                        <h2>Sweater Blackl</h2>
+                        <span>Rp675,000</span>
+                        <i class='bx bxs-cart-alt' id="cart-icon"></i>
+                    </div>
+                </div>
+                <div class="box">
+                    <img src="jual-beli/assets/img/top/Valerina Vest.png">
+                    <div class="content">
+                        <h2>Valerina Vest</h2>
+                        <span>Rp450,000</span>
+                        <i class='bx bxs-cart-alt' id="cart-icon"></i>
+                    </div>
+                </div>
+                <div class="box">
+                    <img src="jual-beli/assets/img/top/top1.png">
+                    <div class="content">
+                        <h2>Navy Tie-Strap Crop top</h2>
+                        <span>Rp425,000</span>
+                        <i class='bx bxs-cart-alt' id="cart-icon"></i>
+                    </div>
+                </div>
+                <div class="box">
+                    <img src="jual-beli/assets/img/top/top2.png">
+                    <div class="content">
+                        <h2>Burgundy Satin Wrap Blouse</h2>
+                        <span>Rp599,000</span>
+                        <i class='bx bxs-cart-alt' id="cart-icon"></i>
+                    </div>
+                </div>
+                <div class="box">
+                    <img src="jual-beli/assets/img/top/top3.png">
+                    <div class="content">
+                        <h2>Beige Asymmetrical Cape Wrap</h2>
+                        <span>Rp850,000</span>
+                        <i class='bx bxs-cart-alt' id="cart-icon"></i>
+                    </div>
+                </div>
+                <div class="box">
+                    <img src="jual-beli/assets/img/top/top4.png">
+                    <div class="content">
+                        <h2>Burgundy Ribbed Contour Crop Top</h2>
+                        <span>Rp475,000</span>
+                        <i class='bx bxs-cart-alt' id="cart-icon"></i>
+                    </div>
+                </div>
+                <div class="box">
+                    <img src="jual-beli/assets/img/top/top5.png">
+                    <div class="content">
+                        <h2>Elegance Bell Sleeve Boat Nect Top</h2>
+                        <span>Rp490,000</span>
+                        <i class='bx bxs-cart-alt' id="cart-icon"></i>
+                    </div>
+                </div>
+                <div class="box">
+                    <img src="jual-beli/assets/img/top/top6.png">
+                    <div class="content">
+                        <h2>Contrast Collar Ballon Sleeve Vest Top</h2>
+                        <span>Rp675,000</span>
+                        <i class='bx bxs-cart-alt' id="cart-icon"></i>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="product2" id="product2">
+            <div class="heading">
+                <p>Suit</p>
+            </div>
+            <div class="product-container">
+                <div class="box">
+                    <img src="jual-beli/assets/img/dress/Bulgavi Dress.png">
+                    <div class="content">
+                        <h2>Bulgavi Dress</h2>
+                        <span>Rp670,000</span>
+                        <i class='bx bxs-cart-alt' id="cart-icon"></i>
+                    </div>
+                </div>
+                <div class="box">
+                    <img src="jual-beli/assets/img/dress/dress putih.png">
+                    <div class="content">
+                        <h2>White Sparkling Dress</h2>
+                        <span>Rp750,000</span>
+                        <i class='bx bxs-cart-alt' id="cart-icon"></i>
+                    </div>
+                </div>
+                <div class="box">
+                    <img src="jual-beli/assets/img/dress/dress1.png">
+                    <div class="content">
+                        <h2>Midnight Fairytale PuffSleeve</h2>
+                        <span>Rp899,000</span>
+                        <i class='bx bxs-cart-alt' id="cart-icon"></i>
+                    </div>
+                </div>
+                <div class="box">
+                    <img src="jual-beli/assets/img/dress/dress2.png">
+                    <div class="content">
+                        <h2>Sage Elegance Aysmmetric Tiered</h2>
+                        <span>Rp950,000</span>
+                        <i class='bx bxs-cart-alt' id="cart-icon"></i>
+                    </div>
+                </div>
+                <div class="box">
+                    <img src="jual-beli/assets/img/dress/dress3.png">
+                    <div class="content">
+                        <h2>Blush Ballon Sleeve Sweetheart</h2>
+                        <span>Rp785,000</span>
+                        <i class='bx bxs-cart-alt' id="cart-icon"></i>
+                    </div>
+                </div>
+                <div class="box">
+                    <img src="jual-beli/assets/img/dress/dress4.png">
+                    <div class="content">
+                        <h2>Cozy Chic Surplice Knit</h2>
+                        <span>Rp650,000</span>
+                        <i class='bx bxs-cart-alt' id="cart-icon"></i>
+                    </div>
+                </div>
+                <div class="box">
+                    <img src="jual-beli/assets/img/dress/dress5.png">
+                    <div class="content">
+                        <h2>Ethereal Brocade Flared Minii Dress</h2>
+                        <span>Rp875,000</span>
+                        <i class='bx bxs-cart-alt' id="cart-icon"></i>
+                    </div>
+                </div>
+                <div class="box">
+                    <img src="jual-beli/assets/img/dress/dress6.png">
+                    <div class="content">
+                        <h2>Sunshine Bloom Tie-waist Maxi Dress</h2>
+                        <span>Rp920,000</span>
+                        <i class='bx bxs-cart-alt' id="cart-icon"></i>
+                    </div>
+                </div>
+                <div class="box">
+                    <img src="jual-beli/assets/img/dress/dress7.png">
+                    <div class="content">
+                        <h2>Heritage Belted A-Line Shirt Dress</h2>
+                        <span>Rp780,000</span>
+                        <i class='bx bxs-cart-alt' id="cart-icon"></i>
+                    </div>
+                </div>
+                <div class="box">
+                    <img src="jual-beli/assets/img/dress/dress8.png">
+                    <div class="content">
+                        <h2>Rose Petal Bow-Neck Pleated Dress</h2>
+                        <span>Rp825,000</span>
+                        <i class='bx bxs-cart-alt' id="cart-icon"></i>
+                    </div>
+                </div>
+                <div class="box">
+                    <img src="jual-beli/assets/img/dress/dress9.png">
+                    <div class="content">
+                        <h2>Wine Velvet Button-Down Belted Dress</h2>
+                        <span>Rp840,000</span>
+                        <i class='bx bxs-cart-alt' id="cart-icon"></i>
+                    </div>
+                </div>
+                <div class="box">
+                    <img src="jual-beli/assets/img/dress/dress10.png">
+                    <div class="content">
+                        <h2>Garden Romance Square-Neck Mini Dress</h2>
+                        <span>Rp895,000</span>
+                        <i class='bx bxs-cart-alt' id="cart-icon"></i>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="product2" id="product2">
+            <div class="heading">
+                <p>Pants</p>
+            </div>
+            <div class="product-container">
+                <div class="box">
+                    <img src="jual-beli/assets/img/pants/p1.png">
+                    <div class="content">
+                        <h2>Nautical Paperbag Palazzo</h2>
+                        <span>Rp595,000</span>
+                        <i class='bx bxs-cart-alt' id="cart-icon"></i>
+                    </div>
+                </div>
+                <div class="box">
+                    <img src="jual-beli/assets/img/pants/p2.png">
+                    <div class="content">
+                        <h2>Sunrise Gradient Wide Leg Jeans</h2>
+                        <span>Rp685,000</span>
+                        <i class='bx bxs-cart-alt' id="cart-icon"></i>
+                    </div>
+                </div>
+                <div class="box">
+                    <img src="jual-beli/assets/img/pants/p3.png">
+                    <div class="content">
+                        <h2>Avant-Garde Draped Panel Trousers</h2>
+                        <span>Rp725,000</span>
+                        <i class='bx bxs-cart-alt' id="cart-icon"></i>
+                    </div>
+                </div>
+                <div class="box">
+                    <img src="jual-beli/assets/img/pants/p4.png">
+                    <div class="content">
+                        <h2>Ivory Flow Maxi Culottes</h2>
+                        <span>Rp620,000</span>
+                        <i class='bx bxs-cart-alt' id="cart-icon"></i>
+                    </div>
+                </div>
+                <div class="box">
+                    <img src="jual-beli/assets/img/pants/p5.png">
+                    <div class="content">
+                        <h2>Classic Highrise Tailored</h2>
+                        <span>Rp620,000</span>
+                        <i class='bx bxs-cart-alt' id="cart-icon"></i>
+                    </div>
+                </div>
+                <div class="box">
+                    <img src="jual-beli/assets/img/pants/p6.png">
+                    <div class="content">
+                        <h2>Midnight Luxe Velvet Trousers</h2>
+                        <span>Rp750,000</span>
+                        <i class='bx bxs-cart-alt' id="cart-icon"></i>
+                    </div>
+                </div>
+                <div class="box">
+                    <img src="jual-beli/assets/img/pants/p7.png">
+                    <div class="content">
+                        <h2>Caramel Structured Wide Leg Trouser</h2>
+                        <span>Rp665,000</span>
+                        <i class='bx bxs-cart-alt' id="cart-icon"></i>
+                    </div>
+                </div>
+                <div class="box">
+                    <img src="jual-beli/assets/img/pants/p8.png">
+                    <div class="content">
+                        <h2>Mgenta Bow-Tie Resort</h2>
+                        <span>Rp580,000</span>
+                        <i class='bx bxs-cart-alt' id="cart-icon"></i>
+                    </div>
+                </div>
+                <div class="box">
+                    <img src="jual-beli/assets/img/pants/p9.png">
+                    <div class="content">
+                        <h2>Blush Wave Patchwork Denim</h2>
+                        <span>Rp710,000</span>
+                        <i class='bx bxs-cart-alt' id="cart-icon"></i>
+                    </div>
+                </div>
+                <div class="box">
+                    <img src="jual-beli/assets/img/pants/p10.png">
+                    <div class="content">
+                        <h2>Camel Tailored Turn-Up</h2>
+                        <span>Rp680,000</span>
+                        <i class='bx bxs-cart-alt' id="cart-icon"></i>
+                    </div>
+                </div>
+                <div class="box">
+                    <img src="jual-beli/assets/img/pants/p11.png">
+                    <div class="content">
+                        <h2>Ribbon Cascade Denim Palazzo</h2>
+                        <span>Rp745,000</span>
+                        <i class='bx bxs-cart-alt' id="cart-icon"></i>
+                    </div>
+                </div>
+                <div class="box">
+                    <img src="jual-beli/assets/img/pants/p12.png">
+                    <div class="content">
+                        <h2>Executive Pleat-Front Palazzo</h2>
+                        <span>Rp630,000</span>
+                        <i class='bx bxs-cart-alt' id="cart-icon"></i>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer class="footer">
+            <div class="footer-box">
+                <h3>Derma Busana</h3>
+                <p>Fashion berkelanjutan dengan pakaian second-hand, donasi, dan daur ulang. Bersama, kita ciptakan gaya yang peduli lingkungan!</p>
+                <div class="social">
+                    <a href="#"><i class='bx bxl-instagram'></i></a>
+                    <a href="#"><i class='bx bxl-facebook'></i></a>
+                    <a href="#"><i class='bx bxl-twitter'></i></a>
+                    <a href="#"><i class='bx bxl-tiktok'></i></a>
+                </div>
+            </div>
+        
+            <div class="footer-box">
+                <h3>Support</h3>
+                <ul>
+                    <li><a href="#">Product</a></li>
+                    <li><a href="#">Help & Support</a></li>
+                    <li><a href="#">Return Terms</a></li>
+                    <li><a href="#">Terms Of Use</a></li>
+                    <li><a href="#">FAQ</a></li>
+                </ul>
+            </div>
+        
+            <div class="footer-box">
+                <h3>Product</h3>
+                <ul>
+                    <li><a href="WoPro.html">Woman</a></li>
+                    <li><a href="ManPro.html">Men</a></li>
+                </ul>
+            </div>
+        
+            <div class="footer-box">
+                <h3>Payment Method</h3>
+                <div class="payment">
+                    <img src="jual-beli/assets/img/visa.jpeg" alt="Visa">
+                    <img src="jual-beli/assets/img/Mastercard.jpeg" alt="Mastercard">
+                    <img src="jual-beli/assets/img/paypal.jpeg" alt="PayPal">
+                    <img src="jual-beli/assets/img/qris.jpeg" alt="QRIS">
+                    <img src="jual-beli/assets/img/dana.jpeg" alt="Dana">
+                </div>
+            </div>
+        </footer>
+        
+        <div class="footer-bottom">
+            <p>© Derna, Derma Busana. All Rights Reserved.</p>
+        </div>
+
+    </body>
+</html>
+   

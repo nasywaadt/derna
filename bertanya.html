@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Derna-Bertanya</title>
+    <!-- Box Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <!-- Custom CSS -->
+     <link rel="stylesheet" href="bertanya/styles.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <header>
+        <a href="#home" class="logo"><img src="assets/img/logo.png" alt="logo"></a>
+        <div class="bx bx-menu" id="menu-icon"></div>
+        <ul class="navbar">
+            <li><a href="index.html">Beranda</a></li>
+            <li><a href="bertanya.html" class="home-active">Bertanya</a></li>
+            <li><a href="berkreasi.html">Berkreasi</a></li>
+            <li class="dropdown">
+                <a href="donasi.html" class="dropdown-toggle">Berbagi</a>
+                <ul class="dropdown-menu">
+                    <li><a href="donasi.html">Donasi</a></li>
+                    <li><a href="daur-ulang.html">Daur Ulang</a></li>
+                </ul>
+            </li>
+            <li><a href="jual-beli.html">Berjual-beli</a></li>
+            <!-- <li>
+                <i class='bx bx-moon' id="darkmode"></i>
+            </li> -->
+        </ul>
+    </header>
+
+    <!-- Home Section -->
+    <section class="home-bertanya" id="home">
+        <div class="home-text">
+            <h2>Analisis Cerdas untuk Pakaian Anda</h2>
+            <p>Jawab beberapa pertanyaan sederhana dan dapatkan rekomendasi terbaik untuk mengelola pakaian bekas Anda</p>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <section class="bertanya-section">
+
+        <div class="form-container" id="questionForm">
+            <form id="clothingForm">
+                <!-- Step 1: Upload Foto -->
+                <div class="step">
+                    <h3><i class="bx bx-camera"></i> Upload Foto Pakaian</h3>
+                    <div class="image-upload" onclick="document.getElementById('fileInput').click()">
+                        <input type="file" id="fileInput" accept="image/*" style="display: none;">
+                        <div id="uploadContent">
+                            <div class="upload-icon">📷</div>
+                            <p><strong>Klik untuk upload foto</strong></p>
+                            <p>atau drag & drop foto pakaian Anda di sini</p>
+                        </div>
+                        <img id="imagePreview" class="image-preview" style="display: none;">
+                    </div>
+                </div>
+
+                <!-- Step 2: Kondisi Pakaian -->
+                <div class="step">
+                    <h3><i class="bx bx-star"></i> Kondisi Pakaian</h3>
+                    <div class="input-group">
+                        <label for="condition">Bagaimana kondisi pakaian Anda?</label>
+                        <select id="condition" required>
+                            <option value="">Pilih kondisi...</option>
+                            <option value="excellent">Sangat Baik - Seperti baru, tidak ada cacat</option>
+                            <option value="good">Baik - Sedikit bekas pakai, kondisi masih bagus</option>
+                            <option value="fair">Cukup - Ada beberapa noda atau kerusakan kecil</option>
+                            <option value="poor">Kurang Baik - Banyak noda, sobek, atau rusak</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Step 3: Kategori & Brand -->
+                <div class="step">
+                    <h3><i class="bx bx-tag"></i> Detail Pakaian</h3>
+                    <div class="input-group">
+                        <label for="category">Kategori Pakaian</label>
+                        <select id="category" required>
+                            <option value="">Pilih kategori...</option>
+                            <option value="atasan">Atasan (Kemeja, Kaos, Blouse)</option>
+                            <option value="bawahan">Bawahan (Celana, Rok)</option>
+                            <option value="dress">Dress/Gaun</option>
+                            <option value="outerwear">Outerwear (Jaket, Cardigan)</option>
+                            <option value="aksesoris">Aksesoris (Tas, Sepatu, Topi)</option>
+                        </select>
+                    </div>
+                    
+                    <div class="input-group">
+                        <label for="brand">Jenis Brand</label>
+                        <select id="brand" required>
+                            <option value="">Pilih jenis brand...</option>
+                            <option value="luxury">Luxury Brand (Gucci, LV, Chanel, dll)</option>
+                            <option value="branded">Brand Terkenal (Zara, H&M, Uniqlo, dll)</option>
+                            <option value="local">Brand Lokal Indonesia</option>
+                            <option value="noname">No Brand/Tidak Diketahui</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Step 4: Harga & Umur -->
+                <div class="step">
+                    <h3><i class="bx bx-calculator"></i> Informasi Tambahan</h3>
+                    <div class="input-group">
+                        <label for="price">Estimasi Harga Beli (Rp)</label>
+                        <input type="number" id="price" placeholder="Contoh: 250000" min="0">
+                    </div>
+                    
+                    <div class="input-group">
+                        <label for="age">Sudah dimiliki berapa lama?</label>
+                        <select id="age" required>
+                            <option value="">Pilih durasi...</option>
+                            <option value="new">Kurang dari 6 bulan</option>
+                            <option value="recent">6 bulan - 2 tahun</option>
+                            <option value="old">2-5 tahun</option>
+                            <option value="veryold">Lebih dari 5 tahun</option>
+                        </select>
+                    </div>
+                </div>
+
+                <button type="submit" class="button" id="submitBtn">
+                    <i class="bx bx-brain"></i> Dapatkan Rekomendasi
+                </button>
+            </form>
+        </div>
+
+        <!-- Result Container -->
+        <div class="result-container" id="resultContainer">
+            <div class="result-header">
+                <div class="result-icon" id="resultIcon">🎯</div>
+                <h2 class="result-title" id="resultTitle">Rekomendasi Kami</h2>
+                <p class="result-description" id="resultDescription"></p>
+            </div>
+            
+            <div class="action-buttons" id="actionButtons">
+                <!-- Buttons will be populated by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Scripts -->
+    <script>
+        // Mobile menu toggle
+        let menu = document.querySelector('#menu-icon');
+        let navbar = document.querySelector('.navbar');
+
+        menu.onclick = () => {
+            menu.classList.toggle('bx-x');
+            navbar.classList.toggle('active');
+        }
+
+        window.onscroll = () => {
+            menu.classList.remove('bx-x');
+            navbar.classList.remove('active');
+        }
+
+        // Header shadow on scroll
+        const header = document.querySelector("header");
+        window.addEventListener("scroll", () => {
+            header.classList.toggle("shadow", window.scrollY > 0);
+        });
+
+        // Image upload functionality
+        const fileInput = document.getElementById('fileInput');
+        const imagePreview = document.getElementById('imagePreview');
+        const uploadContent = document.getElementById('uploadContent');
+        const imageUpload = document.querySelector('.image-upload');
+
+        fileInput.addEventListener('change', handleImageUpload);
+        
+        // Drag and drop functionality
+        imageUpload.addEventListener('dragover', (e) => {
+            e.preventDefault();
+            imageUpload.classList.add('dragover');
+        });
+
+        imageUpload.addEventListener('dragleave', () => {
+            imageUpload.classList.remove('dragover');
+        });
+
+        imageUpload.addEventListener('drop', (e) => {
+            e.preventDefault();
+            imageUpload.classList.remove('dragover');
+            const files = e.dataTransfer.files;
+            if (files.length > 0) {
+                fileInput.files = files;
+                handleImageUpload();
+            }
+        });
+
+        function handleImageUpload() {
+            const file = fileInput.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    imagePreview.src = e.target.result;
+                    imagePreview.style.display = 'block';
+                    uploadContent.style.display = 'none';
+                };
+                reader.readAsDataURL(file);
+            }
+        }
+
+        // AI Classification Logic
+        function classifyClothing(formData) {
+            const { condition, brand, price, age, category } = formData;
+            
+            let score = 0;
+
+            // Scoring based on condition (40% weight)
+            const conditionScores = {
+                'excellent': 40,
+                'good': 30,
+                'fair': 15,
+                'poor': 5
+            };
+            score += conditionScores[condition] || 0;
+
+            // Scoring based on brand (25% weight)
+            const brandScores = {
+                'luxury': 25,
+                'branded': 20,
+                'local': 15,
+                'noname': 5
+            };
+            score += brandScores[brand] || 0;
+
+            // Scoring based on price (20% weight)
+            const numPrice = parseInt(price) || 0;
+            if (numPrice > 500000) score += 20;
+            else if (numPrice > 200000) score += 15;
+            else if (numPrice > 100000) score += 10;
+            else if (numPrice > 50000) score += 5;
+
+            // Scoring based on age (15% weight)
+            const ageScores = {
+                'new': 15,
+                'recent': 12,
+                'old': 8,
+                'veryold': 3
+            };
+            score += ageScores[age] || 0;
+
+            // Decision logic
+            if (score >= 70 && condition !== 'poor') {
+                return {
+                    action: 'jual',
+                    title: '💰 Sebaiknya Dijual',
+                    description: `Pakaian Anda memiliki nilai jual yang baik! Dengan kondisi ${getConditionText(condition)} dan brand ${getBrandText(brand)}, Anda bisa mendapatkan keuntungan dengan menjualnya di marketplace preloved.`,
+                    buttons: [
+                        { text: 'Jual Sekarang', href: 'jual-beli.html', class: 'btn-secondary' }
+                    ]
+                };
+            } else if (score >= 35 && condition !== 'poor') {
+                return {
+                    action: 'donasi',
+                    title: '❤️ Sebaiknya Didonasikan',
+                    description: `Pakaian Anda masih layak pakai dan bisa memberikan manfaat besar untuk orang yang membutuhkan. Mari berbagi kebahagiaan!`,
+                    buttons: [
+                        { text: 'Cari Yayasan', href: 'donasi.html', class: 'btn-secondary' }
+                    ]
+                };
+            } else {
+                return {
+                    action: 'kreasikan',
+                    title: '🎨 Sebaiknya Dikreasikan',
+                    description: `Meskipun tidak layak untuk dijual atau didonasikan, pakaian Anda masih bisa diubah menjadi sesuatu yang berguna! Mari berkreasi!`,
+                    buttons: [
+                        { text: 'Lihat Tutorial', href: 'berkreasi.html', class: 'btn-secondary' }
+                    ]
+                };
+            }
+        }
+
+        function getConditionText(condition) {
+            const conditions = {
+                'excellent': 'sangat baik',
+                'good': 'baik',
+                'fair': 'cukup baik',
+                'poor': 'kurang baik'
+            };
+            return conditions[condition] || condition;
+        }
+
+        function getBrandText(brand) {
+            const brands = {
+                'luxury': 'mewah',
+                'branded': 'terkenal',
+                'local': 'lokal',
+                'noname': 'biasa'
+            };
+            return brands[brand] || brand;
+        }
+
+        // Form submission
+        document.getElementById('clothingForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const formData = {
+                condition: document.getElementById('condition').value,
+                category: document.getElementById('category').value,
+                brand: document.getElementById('brand').value,
+                price: document.getElementById('price').value,
+                age: document.getElementById('age').value
+            };
+
+            // Validate form
+            if (!formData.condition || !formData.category || !formData.brand || !formData.age) {
+                alert('Mohon lengkapi semua field yang diperlukan!');
+                return;
+            }
+
+            // Show loading state
+            const submitBtn = document.getElementById('submitBtn');
+            submitBtn.innerHTML = '<i class="bx bx-loader-alt bx-spin"></i> Menganalisis...';
+            submitBtn.disabled = true;
+
+            // Simulate AI processing delay
+            setTimeout(() => {
+                const result = classifyClothing(formData);
+                showResult(result);
+                
+                // Reset button
+                submitBtn.innerHTML = '<i class="bx bx-brain"></i> Dapatkan Rekomendasi';
+                submitBtn.disabled = false;
+            }, 2000);
+        });
+
+        function showResult(result) {
+            const resultContainer = document.getElementById('resultContainer');
+            const resultIcon = document.getElementById('resultIcon');
+            const resultTitle = document.getElementById('resultTitle');
+            const resultDescription = document.getElementById('resultDescription');
+            const actionButtons = document.getElementById('actionButtons');
+
+            // Set result content
+            resultTitle.textContent = result.title;
+            resultDescription.textContent = result.description;
+            
+            // Set icon based on action
+            const icons = {
+                'jual': '💰',
+                'donasi': '❤️',
+                'kreasikan': '🎨'
+            };
+            resultIcon.textContent = icons[result.action];
+
+            // Set CSS class for styling
+            resultContainer.className = `result-container result-${result.action}`;
+            
+            // Create action buttons
+            actionButtons.innerHTML = '';
+            result.buttons.forEach(button => {
+                const btn = document.createElement('a');
+                btn.href = button.href;
+                btn.className = `action-btn ${button.class}`;
+                btn.textContent = button.text;
+                actionButtons.appendChild(btn);
+            });
+
+            // Add try again button
+            const tryAgainBtn = document.createElement('button');
+            tryAgainBtn.className = 'button';
+            tryAgainBtn.style.marginTop = '20px';
+            tryAgainBtn.innerHTML = '<i class="bx bx-refresh"></i> Coba Lagi';
+            tryAgainBtn.onclick = tryAgain;
+            actionButtons.parentNode.appendChild(tryAgainBtn);
+
+            // Show result with animation
+            document.getElementById('questionForm').style.display = 'none';
+            resultContainer.style.display = 'block';
+            
+            // Scroll to result
+            resultContainer.scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function tryAgain() {
+            document.getElementById('questionForm').style.display = 'block';
+            document.getElementById('resultContainer').style.display = 'none';
+            document.getElementById('questionForm').scrollIntoView({ behavior: 'smooth' });
+            
+            // Reset form
+            document.getElementById('clothingForm').reset();
+            document.getElementById('imagePreview').style.display = 'none';
+            document.getElementById('uploadContent').style.display = 'block';
+        }
+    </script>
+</body>
+</html>
